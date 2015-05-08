@@ -1,0 +1,62 @@
+body {
+  background: #444;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.search, .temp {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  font-size: 1.25em;
+}
+
+button, input {
+  margin: 5px 10px;
+  font-size: 1em;
+}
+
+button {
+  color: #fff;
+  background: #888;
+}
+
+.fiveday {
+  width: 80%;
+  margin: 25px auto;
+  padding: 10px;
+  background: #ccc;
+  display: flex;
+  justify-content: space-between;
+  color: #444;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+.fiveday div[class^="day"] {
+  background: #fff;
+  width: 19%;
+  height: 100%;
+  text-align: center;
+}
+.fiveday div[class^="day"] div {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px), screen and (orientation: portrait) {
+  .fiveday {
+    flex-direction: column;
+  }
+  .fiveday div[class^="day"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .fiveday div:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .temp {
+    font-size: 1em;
+  }
+}
+
